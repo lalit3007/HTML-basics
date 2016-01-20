@@ -1,0 +1,132 @@
+/*
+@font-face{
+     font-family: Ubuntu, sans-serif;
+     src: url();
+}*/
+
+/*@font-face{
+  font-family: Open-Sans, sans-serif;
+}*/
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+header{
+      background-color: #35AB6B;
+      height: 200px;
+      width: 154%;
+
+
+
+}
+footer{
+        background-color: #35AB6B;
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 30px;
+        width: 154%;
+
+}
+.heading{
+      padding: 21px 140px;
+}
+.heading h1{
+        font-size: 50px;
+        margin-bottom: 0px;
+}
+
+.heading h4{
+          margin-top: 0px;
+}
+
+
+/*
+
+.summary{
+        margin: 70px 100px;
+
+}
+
+.preamble{
+        margin: 70px 100px;
+
+}
+
+.explanation{
+        margin: 70px 100px;
+
+}*/
+.participation{
+
+        background-color: #84e184;
+        width: 154%;
+
+}
+
+
+.benefits{
+
+        background-color: #84e184;
+        width: 154%;
+        margin-top: -25px;
+        padding-top: 10px;
+
+}
+/*
+.requirements{
+        margin: 70px 100px;
+
+}*/
+
+.shea{
+        text-align: center;
+        background-color: #84e184;
+        width: 154%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+}
+.shea p{
+
+}
+
+.intro, .mainsupporting{
+      width: 65%;
+      float: left;
+
+}
+
+.sidebar{
+      display: inline-block;
+      width: 35%;
+      background-color: rgba(75,155,125, .7);
+
+      height: 1600px;
+
+
+}
+
+.p1{
+      padding-right: 35%;
+
+}
+
+.design-selection{
+      margin-top: 130px;
+}
+
+.zen-resources{
+        margin-top: 333px;
+}
+.wrapper{
+  margin-left: 20px;
+}
+
+

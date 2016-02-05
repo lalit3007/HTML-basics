@@ -1,0 +1,20 @@
+table {
+ border-collapse: collapse;
+ border: 1px solid black;
+
+}
+tr {
+ border: solid;
+ border-width: 1px 0;
+
+}
+.head{
+text-align: center;
+}
+thead{
+ text-align: left;
+ background: grey ;
+}
+.first-col{
+ background: grey ;
+}

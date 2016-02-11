@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+<script  type="text/javascript">
+       function myFunction(){
+        var v = Math.PI;
+        // var n = prompt("Enter the value of n","");
+        var n = document.getElementById("number").value;
+
+    if(n>17){
+      document.getElementById("w").innerHTML="Limit Exceeded";}
+      else{
+        var r = v.toFixed(n);
+       document.getElementById("w").innerHTML=r;
+      }
+   }
+
+
+
+</script>
+
+</head>
+<body style="text-align: center">
+
+
+<h1 style="text-align: center">  To get PI to the Nth Digit  </h1>
+<form>
+  Enter Number: <input type="text" placeholder="Enter the number" id="number"><br /><br />
+                 <input type="button" value="Submit" onclick="myFunction()"> <br />
+            <div id="w" style="margin-top: 150px">
+
+                 </div>
+</form>
+
+
+</body>
+</html>

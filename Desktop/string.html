@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+<style>
+body {
+  text-align:center;
+  color:#000;
+  background-color: #FFFFF4;
+  font-size: 1.5em;
+}
+#button {
+    margin: 20px;
+}
+#answer {
+  margin: 20px;
+  font-size: 1em;
+}
+
+
+</style>
+
+<script type="text/javascript">
+            var a = new Array();
+
+  function unique(str) {
+      var flag = 0;
+      var index;
+      var k = 0;
+      var newstr;
+      for (var i = 0; i < str.length; i++) {
+          a[k] = str.lastIndexOf(str[i]);
+          if (a[k] == i) {
+              a[k] = 0;
+          }
+          k++;
+
+      }
+
+      for (i = 0; i <= k; i++) {
+          if (a[i] != 0) {
+              flag++;
+              break;
+          }
+      }
+
+      if (flag == 1) {
+          var maxindex = Math.max.apply(Math, a);
+          for (i = 0; i < str.length; i++) {
+              if (a[i] == maxindex) {
+                  index = i;
+
+              }
+
+          }
+          var x = str.slice(0, index);
+
+          var y = str.slice(index + 1, maxindex);
+          var z = str.slice(maxindex + 1, str.length);
+          str = x + y + z + str[index];
+
+          unique(str);
+      } else {
+          {
+              for (i = 0; i < str.length; i++) {
+                  if (str[i] == '_') {
+                      newstr = i;
+                      break;
+                  } else {
+                      newstr = str.length;
+                  }
+
+              }
+          }
+          document.getElementById("answer").innerHTML = "<h3>Output:</h3>" + str.slice(0, newstr);
+      }
+
+  }
+
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+<body>
+<h1>String manipulation Exercise </h1>
+  <form>
+   <label>Enter a string:  </label><input type="textbox" type="text" id="str" placeholder="Enter string" size="25" />
+   <br/>
+   <input type="button" type="button" value="Manipulate" onclick="unique(document.getElementById('str').value);" id="button">
+   <div id="answer"></div>
+  </form>
+
+</body>
+</html>

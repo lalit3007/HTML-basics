@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+    <script type="text/javascript">
+            function prin(){
+              var principal= document.getElementsByName("principal")[0].value;
+              var rate = document.getElementsByName("rate")[0].value;
+              var year = document.getElementsByName("year")[0].value;
+              var form_elements = document.getElementById('my_form').elements;
+              var compound_type = form_elements['m'].value;
+              // console.log(n);
+              var a;
+              var n;
+              rate=rate/100;
+              if(compound_type=='year'){
+                    n=1*year;
+                    rate=rate/1;
+                 // a=(principal*(Math.pow((1+rate), year)));
+                 // document.getElementById("emi").innerHTML= "EMI is" + a;
+              }
+              else if(compound_type=='month'){
+                    n=12*year;
+                    rate=rate/12;
+                  // a=(principal*(Math.pow((1+rate/12), (12*year))));
+                 // document.getElementById("emi").innerHTML= "EMI is" + a;
+              }
+              else if(compound_type=='week'){
+                    n=52*year;
+                    rate=rate/52;
+                 // a=(principal*(Math.pow((1+rate/52), (52*year))));
+                 // document.getElementById("emi").innerHTML= "EMI is" + a;
+              }
+              else if(compound_type=='daily'){
+                    n=365*year;
+                    rate=rate/365;
+                  // a=(principal*(Math.pow((1+rate/365), (365*year))));
+                 // document.getElementById("emi").innerHTML= "EMI is" + a;
+              }
+
+                a=(principal*rate*Math.pow((1+rate), n))/(Math.pow((1+rate),n)-1);
+                document.getElementById("emi").innerHTML="EMI is   " + a;
+
+
+                // var x= (a/(12*year));
+                // document.getElementById("emi").innerHTML="Monthly is" + x;
+}
+
+
+
+    </script>
+    <style type="text/css" media="screen">
+        body {
+          background-color: #FFFFF4;
+        }
+        #emi {
+            padding-top: 150px;
+            font-size: 30px;
+        }
+        #main {
+            margin: auto;
+            width: 50%;
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+       <div id="main">
+        <h1> Mortgage Calculator </h1>
+        <form id="my_form">
+       Enter the amount:<input type="text" name="principal" value=""><br /><br />
+       Enter the Rate:<input type="text" name="rate" value=""><br /><br />
+       Enter the Year:<input type="text" name="year" value=""><br /><br />
+           <label>The period you want to compound money</label>
+                  <ul>
+                      <li>  <input type="radio" name="m" value="year"> Yearly<br> </li>
+                      <li>  <input type="radio" name="m" value="month"> Monthly<br> </li>
+                      <li>  <input type="radio" name="m" value="week"> Weekly<br> </li>
+                      <li>  <input type="radio" name="m" value="daily"> Daily<br><br /> </li>
+                        </ul>
+                        <input type="button" name="Calculate" value="Calculate" onclick="prin()"><br />
+        </form>
+        <div id="emi">
+
+        </div>
+        </div>
+
+
+</body>
+</html>

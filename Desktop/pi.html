@@ -5,6 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <link rel="stylesheet" href="">
+<style type="text/css" media="screen">
+
+body{
+  text-align:center;
+  color:#eeeeee;
+  /*/*background-image: url(../images/pic.jpg);*/
+  background-color: #336699;
+  font-size:30px;
+}
+
+form{
+  position:absolute;
+  top: 30%;
+  left:40%;
+}
+#button{
+  margin-top:50px;
+}
+#answer{
+
+  /*margin-top:20px;*/
+  z-index:2;
+}
+#button {
+    background-color: #eeeeee;
+    width: 10em;
+    height: 2em;
+}
+</style>
 <script  type="text/javascript">
        function myFunction(){
         var v = Math.PI;
@@ -12,10 +41,10 @@
         var n = document.getElementById("number").value;
 
     if(n>17){
-      document.getElementById("w").innerHTML="Limit Exceeded";}
+      document.getElementById("answer").innerHTML="Limit Exceeded";}
       else{
         var r = v.toFixed(n);
-       document.getElementById("w").innerHTML=r;
+       document.getElementById("answer").innerHTML=r;
       }
    }
 
@@ -31,7 +60,7 @@
 <form>
   Enter Number: <input type="text" placeholder="Enter the number" id="number"><br /><br />
                  <input type="button" value="Submit" onclick="myFunction()"> <br />
-            <div id="w" style="margin-top: 150px">
+            <div id="answer" style="margin-top: 200px">
 
                  </div>
 </form>

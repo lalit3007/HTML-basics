@@ -39,7 +39,7 @@
                 <tr>
                     <td>Date of birth:</td>
                     <td>
-                        <input type="date" id="date" />
+                        <input type="datepicker" id="datepicker" />
                     </td>
                 </tr>
                 <tr>
@@ -78,9 +78,14 @@
             </form>
         </table>
     </center>
-    <script type="text/javascript">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+   $("#datepicker").datepicker();
+ });
     function DateCount() {
-        var mydate = document.getElementById("date").value;
+        var mydate = document.getElementById("datepicker").value;
         var mydob = new Date(mydate);
         var age = Date.now() - mydob + (5.5*60*60*1000);
         var ms_in_day = 24 * 60 * 60 * 1000;
